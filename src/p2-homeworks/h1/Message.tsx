@@ -3,7 +3,7 @@ import c from './Message.module.css'
 type MessageType ={
     avatar:string,
     name:string,
-    message: string | number
+    message: string,
     time: string
 }
 function Message(props:MessageType) {
