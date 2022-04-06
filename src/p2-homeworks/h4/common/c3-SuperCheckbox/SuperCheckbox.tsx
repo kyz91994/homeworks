@@ -1,5 +1,6 @@
 import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes} from 'react'
 import s from './SuperCheckbox.module.css'
+import {on} from "cluster";
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
@@ -20,13 +21,14 @@ const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
     }
 ) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        // сделайте так чтоб работал onChange и onChangeChecked
+        onChange && onChange(e)
+        onChangeChecked && onChangeChecked(e.currentTarget.checked) // сделайте так чтоб работал onChange и onChangeChecked
     }
 
-    const finalInputClassName = `${s.checkbox} ${className ? className : ''}`
+    const finalInputClassName = `${s.custom_checkbox} ${className ? className : ''}`
 
     return (
-        <label>
+        <label className={s.slideSwitch}>
             <input
                 type={'checkbox'}
                 onChange={onChangeCallback}
@@ -34,7 +36,8 @@ const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
 
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (checked например там внутри)
             />
-            {children && <span className={s.spanClassName}>{children}</span>}
+            <span  className={s.slideSwitchSlider}></span>
+            {children && <span className={s.text}>{children}</span>}
         </label> // благодаря label нажатие на спан передастся в инпут
     )
 }

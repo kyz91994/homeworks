@@ -1,3 +1,28 @@
-.someClass {
-
+.affairs{
+    height:260px ;
 }
+.affair{
+    display: flex;
+}
+
+.item{
+    background-color: dodgerblue;
+    margin: 10px;
+    width: 150px;
+    padding: 1px;
+    text-align: center;
+    border-radius: 10px;
+}
+.itempriority{
+    border: #0d1e25 solid 1px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 50px;
+    padding:  0 5px;
+    text-align: center;
+}
+.delete{
+    width: 30px;
+    display: inline-block;
+}
+

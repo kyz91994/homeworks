@@ -1,7 +1,103 @@
-.checkbox {
-
+span.text{
+    position: absolute;
+    left: 55px;
+}
+.slideSwitch{
+    position: relative;
+    display: inline-block;
+    margin: 5px 2em;
+    width: 3em;
+    height: 1.5em;
+    outline: none;
 }
 
-.spanClassName {
+.slideSwitch input{
+    opacity: 0;
+    width: 0;
+    height: 1.8em;
+    outline: none;
+}
 
+.slideSwitchSlider{
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 3em;
+    height: 1.5em;
+    cursor: pointer;
+    border: 2px solid;
+    border-color: #EEE #DDD #DDD #EEE;
+    border-radius: 1em;
+    background-color: #DBE7F2;
+    outline: none;
+    -webkit-box-shadow: inset 1px 1px 3px 0px #000, inset -2px -2px 3px 0px rgba(255,255,255,0.3);
+    -moz-box-shadow: inset 1px 1px 3px 0px #000, inset -2px -2px 3px 0px rgba(255,255,255,0.3);
+    -o-box-shadow: inset 1px 1px 3px 0px #000, inset -2px -2px 3px 0px rgba(255,255,255,0.3);
+    box-shadow: inset 1px 1px 3px 0px #000, inset -2px -2px 3px 0px rgba(255,255,255,0.3);
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+
+.slideSwitchSlider::before{
+    position: absolute;
+    content: "";
+    left:3px;
+    top: 2px;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #AAA;
+    border-radius: 1em;
+    background-color: #0d1e25;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    outline: none;
+}
+
+
+.slideSwitchSlider::after{
+    position: absolute;
+    content: "";
+    top: -3px;
+    left: -3px;
+    width: 3.3em;
+    height: 1.7em;
+    border: 2px solid;
+    border-color: rgba(30, 143, 255,0.0);
+    border-radius: 1em;
+    outline: none;
+}
+
+
+input:checked + .slideSwitchSlider {
+    background-color: #0d1e25;
+}
+
+input:checked + .slideSwitchSlider::before {
+    background-color: whitesmoke;
+}
+
+input:focus + .slideSwitchSlider::after {
+    border-color: rgba(30, 143, 255,0.5);
+    outline: none;
+}
+
+input:checked + .slideSwitchSlider:before {
+    -webkit-transform: translateX(1.4em);
+    -moz-transform: translateX(1.4em);
+    -o-transform: translateX(1.4em);
+    transform: translateX(1.4em);
+}
+
+
+input:disabled  + .slideSwitchSlider{
+    background-color: #DDD;
+}
+
+input:disabled  + .slideSwitchSlider::before{
+    background-color: #DDD;
 }

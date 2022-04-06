@@ -1,7 +1,38 @@
-.someClass {
-
+.greeting{
+    display: flex;
+    justify-content: left;
 }
+/*.input {*/
+/*    margin: 5px;*/
+/*    border: 1px solid ;*/
+/*    outline: none;*/
+/*}*/
 
-.error {
-    border: 1px solid red;
+/*.input:focus {*/
+/*    margin: 5px;*/
+/*    border: 1px solid green;*/
+/*    outline: none;*/
+/*}*/
+/*.errorInput {*/
+/*    margin: 5px;*/
+/*    border: 1px solid red;*/
+/*    outline: none;*/
+/*}*/
+/*.button{*/
+/*    margin: 5px;*/
+/*    height: 20px;*/
+/*    background-color: #0d1e25;*/
+/*    color: aliceblue;*/
+/*}*/
+/*.button:disabled{*/
+
+/*    color: #333333;*/
+/*}*/
+/*.error{*/
+/*    margin-left: 5px;*/
+/*    color: red;*/
+/*    height: 30px;*/
+/*}*/
+.count{
+    margin: 5px;
 }

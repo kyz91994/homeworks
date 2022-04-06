@@ -1,0 +1,16 @@
+.customspan{
+    display: block;
+    background: #4c8dab;
+    height: 20px;
+    width: 200px;
+    padding: 10px;
+    margin-left: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+.customspan:hover{
+    color: goldenrod;
+}
+.customspan img{
+    width:200px
+}
