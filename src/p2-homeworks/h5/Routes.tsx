@@ -8,9 +8,9 @@ import JuniorPlus from "./pages/JuniorPlus";
 
 
 export const PATH = {
-    PRE_JUNIOR: 'pre-junior',
-    JUNIOR: 'junior',
-    JUNIOR_PLUS: 'juniorplus'
+    PRE_JUNIOR: '/pre-junior',
+    JUNIOR: '/junior',
+    JUNIOR_PLUS: '/juniorplus'
     // add paths
 }
 
@@ -20,12 +20,12 @@ function BrowserRoutes() {
             {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу PRE_JUNIOR*/}
             {/*exact нужен чтоб указать полное совподение (что после '/' ничего не будет)*/}
             <Routes>
-                <Route path='/homeworks/'>
+
                     <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
                     <Route path={PATH.JUNIOR} element={<Junior/>}/>
                     <Route path={PATH.JUNIOR_PLUS} element={<JuniorPlus/>}/>
                     <Route element={<Error404/>}/>
-                </Route>
+
             </Routes>
         </div>
     )
