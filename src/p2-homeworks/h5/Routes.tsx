@@ -14,7 +14,7 @@ export const PATH = {
     // add paths
 }
 
-function HashRoutes() {
+function BrowserRoutes() {
     return (
         <div>
             {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу PRE_JUNIOR*/}
@@ -29,4 +29,4 @@ function HashRoutes() {
     )
 }
 
-export default HashRoutes
+export default BrowserRoutes
